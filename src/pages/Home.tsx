@@ -25,7 +25,7 @@ const verificationMethods = [
     route: "/verify/qr-scanner"
   },
   {
-    title: "Eye Scan",
+    title: "Face Scan",
     description: "Biometric verification using iris scanning",
     icon: Eye,
     color: "success" as const,
@@ -33,6 +33,13 @@ const verificationMethods = [
   },
   {
     title: "Fingerprint Scan",
+    description: "Secure fingerprint-based verification",
+    icon: Fingerprint, 
+    color: "warning" as const,
+    route: "/verify/fingerprint"
+  },
+   {
+    title: "CNIC Search",
     description: "Secure fingerprint-based verification",
     icon: Fingerprint, 
     color: "warning" as const,
