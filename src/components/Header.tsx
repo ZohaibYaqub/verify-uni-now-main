@@ -8,10 +8,10 @@ export function Header() {
   const isAdminRoute = location.pathname.startsWith('/admin');
 
   return (
-    <header className="bg-gradient-primary text-primary-foreground shadow-lg">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3" onClick={() => navigate('/')} role="button">
+    <header className="bg-gradient-primary text-primary-foreground shadow-lg  ">
+      <div className="container mx-auto px-4 py-4 sm:px-1 sm:py-2">
+        <div className="flex items-center justify-between sm:flex flex-col gap-2 ">
+          <div className="flex items-center space-x-3  " onClick={() => navigate('/')} role="button">
             <GraduationCap size={32} />
             <div>
               <h1 className="text-xl font-bold">University of Gujrat</h1>
@@ -19,7 +19,7 @@ export function Header() {
             </div>
           </div>
           
-          <nav className="flex items-center space-x-4">
+          <nav className="flex items-center space-x-4 ">
             <Button 
               variant={!isAdminRoute ? "secondary" : "ghost"} 
               onClick={() => navigate('/')}
