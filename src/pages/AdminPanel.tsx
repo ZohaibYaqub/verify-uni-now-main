@@ -1,11 +1,19 @@
-import { Header } from "@/components/Header";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Users, 
-  UserPlus, 
-  Search, 
-  FileText, 
+import { GraduationCap, Settings } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+
+export function Header() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+}
+import {
+  Users,
+  UserPlus,
+  Search,
+  FileText,
   Activity,
   Eye,
   Fingerprint,
@@ -17,43 +25,71 @@ const adminStats = [
   { title: "Verified Today", value: "89", icon: Activity, color: "success" },
   { title: "Pending Records", value: "12", icon: FileText, color: "warning" },
   { title: "Active Scans", value: "5", icon: Search, color: "accent" }
+    
 ];
 
 const recentScans = [
-  { 
-    id: "VS001", 
-    student: "Ahmed Ali", 
-    rollNo: "20CS-001", 
-    method: "Fingerprint", 
-    time: "10:30 AM", 
+  {
+    id: "VS001",
+    student: "Ahmed Ali",
+    rollNo: "20CS-001",
+    method: "Fingerprint",
+    time: "10:30 AM",
     status: "Success",
     icon: Fingerprint
   },
-  { 
-    id: "VS002", 
-    student: "Fatima Khan", 
-    rollNo: "20CS-045", 
-    method: "QR Code", 
-    time: "10:25 AM", 
+  {
+    id: "VS002",
+    student: "Fatima Khan",
+    rollNo: "20CS-045",
+    method: "QR Code",
+    time: "10:25 AM",
     status: "Success",
     icon: QrCode
   },
-  { 
-    id: "VS003", 
-    student: "Muhammad Hassan", 
-    rollNo: "20CS-078", 
-    method: "Eye Scan", 
-    time: "10:20 AM", 
+  {
+    id: "VS003",
+    student: "Muhammad Hassan",
+    rollNo: "20CS-078",
+    method: "Eye Scan",
+    time: "10:20 AM",
     status: "Failed",
     icon: Eye
   }
 ];
 
 export default function AdminPanel() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
+      {/* <Header /> */}
+      <header className="bg-gradient-primary text-primary-foreground shadow-lg">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3" role="button">
+              <GraduationCap size={32} />
+              <div>
+                <h1 className="text-xl font-bold">University of Gujrat</h1>
+                <p className="text-sm opacity-90">Student Verification System</p>
+              </div>
+            </div>
+
+            <nav className="flex items-center space-x-4">
+              <Button
+                variant={!isAdminRoute ? "secondary" : "ghost"}
+                onClick={() => navigate('/')}
+                className={!isAdminRoute ? "bg-white/20 text-white hover:bg-white/30" : "text-white/80 hover:text-white hover:bg-white/10"}
+              >
+                Logout
+              </Button>
+
+            </nav>
+          </div>
+        </div>
+      </header>
+
       <div className="container mx-auto px-4 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
@@ -127,18 +163,17 @@ export default function AdminPanel() {
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        scan.status === 'Success' 
-                          ? 'bg-success/10 text-success' 
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${scan.status === 'Success'
+                          ? 'bg-success/10 text-success'
                           : 'bg-destructive/10 text-destructive'
-                      }`}>
+                        }`}>
                         {scan.status}
                       </span>
                     </div>
                   </div>
                 ))}
               </div>
-              
+
               <Button variant="outline" className="w-full mt-4">
                 View All Scans
               </Button>

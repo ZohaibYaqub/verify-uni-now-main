@@ -29,7 +29,7 @@ export function Header() {
             </Button>
             <Button 
               variant={isAdminRoute ? "secondary" : "ghost"}
-              onClick={() => navigate('/admin')}
+              onClick={() => navigate('/Auth')}
               className={isAdminRoute ? "bg-white/20 text-white hover:bg-white/30" : "text-white/80 hover:text-white hover:bg-white/10"}
             >
               <Settings size={16} />

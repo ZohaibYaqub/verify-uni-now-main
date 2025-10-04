@@ -7,9 +7,10 @@ import Home from "./pages/Home";
 import AdminPanel from "./pages/AdminPanel";
 import RollNumberSearch from "./pages/RollNumberSearch";
 import NotFound from "./pages/NotFound";
-import QRScanner from "./pages/QRScanner"
-import EyeScanner from "./pages/EyeScanner";
-import FingerprintScanner from "./pages/FingerprintScanner";
+import Facescan from "./pages/Facescan";
+import CNICSearch from "./pages/CnicSearch";
+import Fingerprint from "./pages/Fingerprint";
+import Auth from "./pages/Auth";
 
 
 const queryClient = new QueryClient();
@@ -22,11 +23,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/Auth" element={<Auth />} />
+          <Route path="/Admin" element={<AdminPanel />} />
           <Route path="/verify/roll-number" element={<RollNumberSearch />} />
-          <Route path="/verify/qr-scanner" element={<QRScanner/>} />
-          <Route path="/verify/eye-scan" element={<EyeScanner/>} />
-          <Route path="/verify/fingerprint" element={<FingerprintScanner/>} />
+          <Route path="/verify/cnic" element={<CNICSearch />} />
+          <Route path="/verify/face-scan" element={<Facescan />} />
+          <Route path="/verify/finger" element={<Fingerprint />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
