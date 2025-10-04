@@ -8,9 +8,9 @@ export function Header() {
   const isAdminRoute = location.pathname.startsWith('/admin');
 
   return (
-    <header className="bg-gradient-primary text-primary-foreground shadow-lg  ">
-      <div className="container mx-auto px-4 py-4 sm:px-1 sm:py-2">
-        <div className="flex items-center justify-between sm:flex flex-col gap-2 ">
+    <header className="bg-gradient-primary text-primary-foreground shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between flex-col gap-2 sm:flex-row">
           <div className="flex items-center space-x-3  " onClick={() => navigate('/')} role="button">
             <GraduationCap size={32} />
             <div>
