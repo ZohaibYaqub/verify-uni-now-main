@@ -10,12 +10,12 @@ import { useNavigate } from "react-router-dom";
 // Mock student data
 const mockStudentData = {
   name: "Ahmed Ali Khan",
-  rollNumber: "20CS-001",
+  rollNumber: "22021519-110",
   department: "Computer Science", 
-  batch: "2020-2024",
-  semester: "8th Semester",
+  batch: "2022-2026",
+  semester: "7h Semester",
   status: "Active",
-  validity: "Valid until Dec 2024",
+  validity: "Valid until July 2026",
   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
 };
 
@@ -34,7 +34,7 @@ export default function RollNumberSearch() {
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     // Check if roll number matches mock data
-    if (rollNumber.toLowerCase() === "20cs-001" || rollNumber.toLowerCase() === "20cs001") {
+    if (rollNumber.toLowerCase() === "22021519-110" || rollNumber.toLowerCase() === "22021519-110") {
       setStudentFound(true);
     } else {
       setStudentFound(false);
@@ -79,7 +79,7 @@ export default function RollNumberSearch() {
                 <Label htmlFor="rollNumber">Student Roll Number</Label>
                 <Input
                   id="rollNumber"
-                  placeholder="Enter roll number (e.g., 20CS-001)"
+                  placeholder="Enter roll number (e.g., 22021519-110)"
                   value={rollNumber}
                   onChange={(e) => setRollNumber(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -107,7 +107,7 @@ export default function RollNumberSearch() {
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
-                Try "20CS-001" for demo purposes
+                Try "22021519-110" for a successful search.
               </p>
             </CardContent>
           </Card>

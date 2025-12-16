@@ -9,34 +9,34 @@ import { useNavigate } from "react-router-dom";
 
 // Mock CNIC data
 const mockCnicData = {
-  "1234567890123": {
+  "3450231115412": {
     name: "Ahmed Ali Khan",
-    rollNumber: "20CS-001",
+    rollNumber: "22021519-120",
     department: "Computer Science",
-    batch: "2020-2024",
-    semester: "8th Semester",
+     batch: "2022-2026",
+    semester: "7th Semester",
     status: "Active",
-    validity: "Valid until Dec 2024",
+    validity: "Valid until JUly 2026",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
-  "9876543210987": {
+  "3450231115415": {
     name: "Sara Fatima",
-    rollNumber: "20CS-002",
+    rollNumber: "22021519-130",
     department: "Computer Science",
-    batch: "2020-2024",
-    semester: "8th Semester",
+    batch: "2022-2026",
+    semester: "7th Semester",
     status: "Active",
-    validity: "Valid until Dec 2024",
+    validity: "Valid until JUly 2026",
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
-  "1112223334445": {
+  "3450231115419": {
     name: "Ali Raza",
-    rollNumber: "20CS-003",
+    rollNumber: "22021519-140",
     department: "Computer Science",
-    batch: "2020-2024",
-    semester: "8th Semester",
+   batch: "2022-2026",
+    semester: "7th Semester",
     status: "Active",
-    validity: "Valid until Dec 2024",
+    validity: "Valid until JUly 2026",
     image: "https://randomuser.me/api/portraits/men/46.jpg"
   }
 };
@@ -130,7 +130,7 @@ export default function CNICSearch() {
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                Try "1234567890123" for demo purposes
+                Try "3450231115412" for a successful search.
               </p>
             </CardContent>
           </Card>
