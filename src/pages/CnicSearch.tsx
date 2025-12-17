@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const mockCnicData = {
   "3450231115412": {
     name: "Ahmed Ali Khan",
-    rollNumber: "22021519-120",
+    rollNumber: "22021519-110",
     department: "Computer Science",
      batch: "2022-2026",
     semester: "7th Semester",
@@ -130,7 +130,7 @@ export default function CNICSearch() {
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                Try "3450231115412" for a successful search.
+                Try : 3450231115412 , 3450231115415 , 3450231115419 for a successful search.
               </p>
             </CardContent>
           </Card>
